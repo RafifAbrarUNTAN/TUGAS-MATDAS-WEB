@@ -1,0 +1,415 @@
+/* === CSS UNTUK MENGATUR TAMPILAN SELURUH HALAMAN === */
+
+/* Pengaturan dasar untuk body/seluruh halaman */
+body {
+    box-sizing: border-box; /* Membuat padding dan border dihitung dalam ukuran total elemen */
+    margin: 0; /* Menghilangkan margin default browser */
+    padding: 0; /* Menghilangkan padding default browser */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Set font yang modern dan mudah dibaca */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Membuat background gradien dari biru ke ungu */
+    min-height: 100vh; /* Tinggi minimum 100% dari viewport (layar) */
+    color: white; /* Warna teks putih */
+}
+
+/* === CSS UNTUK HEADER/BAGIAN ATAS WEBSITE === */
+.header {
+    background: rgba(255, 255, 255, 0.1); /* Background putih transparan 10% */
+    backdrop-filter: blur(10px); /* Efek blur pada background di belakang header */
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2); /* Garis bawah putih transparan */
+    padding: 20px 0; /* Jarak dalam atas-bawah 20px */
+    text-align: center; /* Teks di tengah */
+    position: sticky; /* Header tetap di atas saat scroll */
+    top: 0; /* Posisi dari atas 0px */
+    z-index: 100; /* Layer paling atas agar tidak tertutup elemen lain */
+}
+
+.header h1 {
+    margin: 0; /* Hilangkan margin default */
+    font-size: 2.5rem; /* Ukuran font besar */
+    font-weight: 700; /* Font tebal */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Bayangan teks untuk efek depth */
+    letter-spacing: 2px; /* Jarak antar huruf */
+}
+
+/* === CONTAINER UTAMA === */
+.container {
+    max-width: 1200px; /* Lebar maksimal container */
+    margin: 0 auto; /* Center container secara horizontal */
+    padding: 40px 20px; /* Padding dalam container */
+}
+
+/* === BAGIAN HERO/PEMBUKA === */
+.hero-section {
+    text-align: center; /* Teks di tengah */
+    margin-bottom: 60px; /* Jarak bawah */
+}
+
+.hero-section h2 {
+    font-size: 2.2rem; /* Ukuran font judul */
+    margin-bottom: 20px; /* Jarak bawah */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Bayangan teks */
+}
+
+.hero-section p {
+    font-size: 1.2rem; /* Ukuran font paragraf */
+    line-height: 1.6; /* Tinggi baris untuk readability */
+    max-width: 800px; /* Lebar maksimal paragraf */
+    margin: 0 auto 40px; /* Center paragraf dan beri margin bawah */
+    opacity: 0.9; /* Sedikit transparan */
+}
+
+/* === GRID TOMBOL NAVIGASI === */
+.nav-buttons {
+    display: grid; /* Gunakan CSS Grid */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom responsif dengan lebar minimum 280px */
+    gap: 30px; /* Jarak antar grid item */
+    margin-bottom: 50px; /* Jarak bawah */
+}
+
+.nav-button {
+    background: rgba(255, 255, 255, 0.15); /* Background putih transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Border transparan */
+    border-radius: 20px; /* Sudut melengkung */
+    padding: 30px; /* Padding dalam */
+    text-align: center; /* Teks di tengah */
+    cursor: pointer; /* Cursor pointer saat hover */
+    transition: all 0.3s ease; /* Animasi smooth untuk semua perubahan */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek depth */
+}
+
+.nav-button:hover {
+    transform: translateY(-5px); /* Gerak naik saat hover */
+    background: rgba(255, 255, 255, 0.25); /* Background lebih terang */
+    border-color: rgba(255, 255, 255, 0.4); /* Border lebih terang */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Bayangan lebih besar */
+}
+
+.nav-button h3 {
+    font-size: 1.5rem; /* Ukuran font judul tombol */
+    margin-bottom: 15px; /* Jarak bawah */
+    color: #fff; /* Warna putih */
+}
+
+.nav-button p {
+    font-size: 1rem; /* Ukuran font deskripsi */
+    line-height: 1.5; /* Tinggi baris */
+    opacity: 0.9; /* Sedikit transparan */
+    margin: 0; /* Hilangkan margin default */
+}
+
+/* === TOMBOL KREDIT === */
+.credit-button {
+    position: fixed; /* Posisi tetap di layar */
+    bottom: 30px; /* Jarak dari bawah */
+    right: 30px; /* Jarak dari kanan */
+    background: rgba(255, 255, 255, 0.2); /* Background transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 50px; /* Bentuk oval */
+    padding: 15px 25px; /* Padding dalam */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Cursor pointer */
+    transition: all 0.3s ease; /* Animasi smooth */
+    font-weight: 600; /* Font semi-bold */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+.credit-button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Background lebih terang saat hover */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* === SECTION KONTEN === */
+.content-section {
+    display: none; /* Sembunyikan secara default */
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    border-radius: 20px; /* Sudut melengkung */
+    padding: 40px; /* Padding dalam */
+    margin-top: 30px; /* Jarak atas */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Border transparan */
+}
+
+.content-section.active {
+    display: block; /* Tampilkan saat active */
+    animation: fadeIn 0.5s ease; /* Animasi fade in */
+}
+
+/* === ANIMASI FADE IN === */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; /* Mulai dari transparan */
+        transform: translateY(20px); /* Mulai dari posisi lebih bawah */
+    }
+    to { 
+        opacity: 1; /* Akhir opaque */
+        transform: translateY(0); /* Akhir di posisi normal */
+    }
+}
+
+/* === TOMBOL KEMBALI === */
+.back-button {
+    background: rgba(255, 255, 255, 0.2); /* Background transparan */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 10px 20px; /* Padding dalam */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Cursor pointer */
+    margin-bottom: 20px; /* Jarak bawah */
+    display: inline-block; /* Display inline-block */
+    transition: all 0.3s ease; /* Animasi smooth */
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Background lebih terang saat hover */
+}
+
+/* === MODAL === */
+.modal {
+    display: none; /* Sembunyikan secara default */
+    position: fixed; /* Posisi tetap */
+    top: 0; /* Dari atas */
+    left: 0; /* Dari kiri */
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    background: rgba(0, 0, 0, 0.7); /* Background gelap transparan */
+    backdrop-filter: blur(5px); /* Efek blur */
+    z-index: 1000; /* Layer paling atas */
+    justify-content: center; /* Center horizontal */
+    align-items: center; /* Center vertical */
+}
+
+.modal.active {
+    display: flex; /* Tampilkan sebagai flexbox saat active */
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.95); /* Background putih hampir opaque */
+    color: #333; /* Warna teks gelap */
+    padding: 40px; /* Padding dalam */
+    border-radius: 20px; /* Sudut melengkung */
+    text-align: center; /* Teks di tengah */
+    max-width: 500px; /* Lebar maksimal */
+    margin: 20px; /* Margin */
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); /* Bayangan besar */
+}
+
+.close-modal {
+    background: #667eea; /* Background biru */
+    color: white; /* Teks putih */
+    border: none; /* Hilangkan border */
+    padding: 12px 24px; /* Padding dalam */
+    border-radius: 10px; /* Sudut melengkung */
+    cursor: pointer; /* Cursor pointer */
+    margin-top: 20px; /* Jarak atas */
+    font-size: 1rem; /* Ukuran font */
+    transition: all 0.3s ease; /* Animasi smooth */
+}
+
+.close-modal:hover {
+    background: #5a67d8; /* Background lebih gelap saat hover */
+    transform: scale(1.05); /* Sedikit membesar */
+}
+
+/* === PROGRAM INTERAKTIF === */
+.program-container {
+    margin-top: 20px; /* Jarak atas */
+}
+
+.program-selector {
+    margin-bottom: 30px; /* Jarak bawah */
+}
+
+.program-buttons {
+    display: flex; /* Flexbox layout */
+    flex-wrap: wrap; /* Wrap ke baris baru jika perlu */
+    gap: 10px; /* Jarak antar tombol */
+    margin-top: 15px; /* Jarak atas */
+}
+
+.program-btn {
+    background: rgba(255, 255, 255, 0.2); /* Background transparan */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 12px 20px; /* Padding dalam */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Cursor pointer */
+    transition: all 0.3s ease; /* Animasi smooth */
+    font-size: 0.9rem; /* Ukuran font */
+}
+
+.program-btn:hover, .program-btn.active {
+    background: rgba(255, 255, 255, 0.3); /* Background lebih terang */
+    border-color: rgba(255, 255, 255, 0.5); /* Border lebih terang */
+    transform: translateY(-2px); /* Gerak naik sedikit */
+}
+
+.program-demo {
+    display: none; /* Sembunyikan secara default */
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    border-radius: 15px; /* Sudut melengkung */
+    padding: 25px; /* Padding dalam */
+    margin-top: 20px; /* Jarak atas */
+}
+
+.program-demo.active {
+    display: block; /* Tampilkan saat active */
+    animation: fadeIn 0.5s ease; /* Animasi fade in */
+}
+
+.demo-area {
+    margin-top: 20px; /* Jarak atas */
+}
+
+/* === INPUT GROUPS === */
+.input-group {
+    display: flex; /* Flexbox layout */
+    gap: 10px; /* Jarak antar elemen */
+    margin: 15px 0; /* Jarak atas-bawah */
+    flex-wrap: wrap; /* Wrap ke baris baru jika perlu */
+}
+
+.input-group input {
+    flex: 1; /* Ambil ruang yang tersisa */
+    min-width: 200px; /* Lebar minimum */
+    padding: 12px; /* Padding dalam */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 8px; /* Sudut melengkung */
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    color: white; /* Warna teks */
+    font-size: 1rem; /* Ukuran font */
+}
+
+.input-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Warna placeholder transparan */
+}
+
+.input-group button, .stack-controls button {
+    padding: 12px 20px; /* Padding dalam */
+    background: rgba(255, 255, 255, 0.2); /* Background transparan */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 8px; /* Sudut melengkung */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Cursor pointer */
+    transition: all 0.3s ease; /* Animasi smooth */
+    font-size: 1rem; /* Ukuran font */
+}
+
+.input-group button:hover, .stack-controls button:hover {
+    background: rgba(255, 255, 255, 0.3); /* Background lebih terang saat hover */
+    transform: translateY(-2px); /* Gerak naik sedikit */
+}
+
+/* === AREA HASIL === */
+.result-area {
+    background: rgba(0, 0, 0, 0.2); /* Background gelap transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 15px; /* Padding dalam */
+    margin: 15px 0; /* Jarak atas-bawah */
+    min-height: 50px; /* Tinggi minimum */
+    border-left: 4px solid rgba(255, 255, 255, 0.5); /* Border kiri sebagai accent */
+}
+
+.steps-area {
+    background: rgba(0, 0, 0, 0.1); /* Background gelap transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 15px; /* Padding dalam */
+    margin: 15px 0; /* Jarak atas-bawah */
+    font-family: 'Courier New', monospace; /* Font monospace untuk kode */
+    font-size: 0.9rem; /* Ukuran font */
+    line-height: 1.6; /* Tinggi baris */
+}
+
+/* === STACK CONTROLS === */
+.stack-controls {
+    display: flex; /* Flexbox layout */
+    gap: 10px; /* Jarak antar elemen */
+    margin-bottom: 20px; /* Jarak bawah */
+    flex-wrap: wrap; /* Wrap ke baris baru jika perlu */
+}
+
+.stack-controls input {
+    flex: 1; /* Ambil ruang yang tersisa */
+    min-width: 150px; /* Lebar minimum */
+    padding: 12px; /* Padding dalam */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Border transparan */
+    border-radius: 8px; /* Sudut melengkung */
+    background: rgba(255, 255, 255, 0.1); /* Background transparan */
+    color: white; /* Warna teks */
+}
+
+.stack-visual {
+    background: rgba(0, 0, 0, 0.2); /* Background gelap transparan */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Padding dalam */
+    margin: 15px 0; /* Jarak atas-bawah */
+    min-height: 200px; /* Tinggi minimum */
+    border: 2px dashed rgba(255, 255, 255, 0.3); /* Border putus-putus */
+}
+
+.stack-label {
+    font-weight: bold; /* Font tebal */
+    margin-bottom: 15px; /* Jarak bawah */
+    color: rgba(255, 255, 255, 0.8); /* Warna sedikit transparan */
+}
+
+.stack-item {
+    background: rgba(255, 255, 255, 0.2); /* Background transparan */
+    border: 2px solid rgba(255, 255, 255, 0.4); /* Border transparan */
+    border-radius: 8px; /* Sudut melengkung */
+    padding: 10px; /* Padding dalam */
+    margin: 5px 0; /* Jarak atas-bawah */
+    text-align: center; /* Teks di tengah */
+    animation: stackPush 0.3s ease; /* Animasi saat ditambahkan */
+}
+
+/* === ANIMASI STACK PUSH === */
+@keyframes stackPush {
+    from { 
+        opacity: 0; /* Mulai transparan */
+        transform: translateY(-20px); /* Mulai dari atas */
+    }
+    to { 
+        opacity: 1; /* Akhir opaque */
+        transform: translateY(0); /* Akhir di posisi normal */
+    }
+}
+
+.highlight {
+    background: rgba(255, 255, 0, 0.3) !important; /* Background kuning untuk highlight */
+    border-color: rgba(255, 255, 0, 0.6) !important; /* Border kuning */
+}
+
+/* === RESPONSIVE DESIGN UNTUK MOBILE === */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem; /* Font lebih kecil di mobile */
+    }
+    
+    .hero-section h2 {
+        font-size: 1.8rem; /* Font lebih kecil di mobile */
+    }
+    
+    .nav-buttons {
+        grid-template-columns: 1fr; /* Satu kolom di mobile */
+    }
+    
+    .credit-button {
+        bottom: 20px; /* Jarak lebih kecil dari bawah */
+        right: 20px; /* Jarak lebih kecil dari kanan */
+        padding: 12px 20px; /* Padding lebih kecil */
+    }
+
+    .program-buttons {
+        flex-direction: column; /* Susun vertikal di mobile */
+    }
+
+    .input-group {
+        flex-direction: column; /* Susun vertikal di mobile */
+    }
+
+    .stack-controls {
+        flex-direction: column; /* Susun vertikal di mobile */
+    }
+}

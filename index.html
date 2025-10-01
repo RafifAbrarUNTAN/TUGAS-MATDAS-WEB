@@ -1,0 +1,253 @@
+<!DOCTYPE html> <!-- Deklarasi dokumen HTML5 -->
+<html lang="id"> <!-- Tag pembuka HTML dengan bahasa Indonesia -->
+<head> <!-- Bagian kepala dokumen yang berisi metadata -->
+    <meta charset="UTF-8"> <!-- Set encoding karakter ke UTF-8 untuk mendukung karakter Indonesia -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Membuat website responsif di semua perangkat -->
+    <title>Matematika Dasar untuk Informatika</title> <!-- Judul yang muncul di tab browser -->
+    
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- BAGIAN HEADER/KEPALA WEBSITE -->
+    <div class="header">
+        <h1>Tugas MatDas</h1> <!-- Judul utama website -->
+    </div>
+
+    <!-- CONTAINER UTAMA UNTUK SEMUA KONTEN -->
+    <div class="container">
+        <!-- HALAMAN UTAMA/BERANDA -->
+        <div id="home-section">
+            <!-- Bagian hero/pembuka dengan judul dan deskripsi -->
+            <div class="hero-section">
+                <h2>Matematika Dasar untuk Informatika</h2>
+                <p>Pelajari bagaimana konsep matematika dasar seperti logika dan fungsi diimplementasikan dalam menyelesaikan permasalahan algoritma dan struktur data di bidang informatika.</p>
+            </div>
+
+            <!-- GRID TOMBOL NAVIGASI UTAMA -->
+            <div class="nav-buttons">
+                <!-- Tombol untuk halaman Algoritma -->
+                <div class="nav-button" onclick="showSection('algoritma')">
+                    <h3>🔄 Algoritma</h3>
+                    <p>Pelajari bagaimana logika matematika diterapkan dalam merancang dan menganalisis algoritma yang efisien</p>
+                </div>
+
+                <!-- Tombol untuk halaman Struktur Data -->
+                <div class="nav-button" onclick="showSection('struktur-data')">
+                    <h3>📊 Struktur Data</h3>
+                    <p>Memahami implementasi struktur data menggunakan konsep matematika dasar dan fungsi</p>
+                </div>
+
+                <!-- Tombol untuk halaman Logika Matematika -->
+                <div class="nav-button" onclick="showSection('logika')">
+                    <h3>🧠 Logika Matematika</h3>
+                    <p>Dasar-dasar logika proposisional dan predikat yang menjadi fondasi pemrograman</p>
+                </div>
+
+                <!-- Tombol untuk halaman Fungsi Matematika -->
+                <div class="nav-button" onclick="showSection('fungsi')">
+                    <h3>📈 Fungsi Matematika</h3>
+                    <p>Konsep fungsi, domain, range, dan aplikasinya dalam pemrograman dan algoritma</p>
+                </div>
+
+                <!-- Tombol untuk halaman Program Interaktif -->
+                <div class="nav-button" onclick="showSection('program')">
+                    <h3>💻 Program Interaktif</h3>
+                    <p>Implementasi langsung algoritma dan struktur data menggunakan konsep logika dan fungsi matematika</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HALAMAN ALGORITMA -->
+        <div id="algoritma-section" class="content-section">
+            <div class="back-button" onclick="showHome()">← Kembali ke Beranda</div>
+            <h2>🔄 Algoritma dan Matematika Dasar</h2>
+            <h3>Penerapan Logika dalam Algoritma</h3>
+            <p>Algoritma adalah serangkaian langkah logis untuk menyelesaikan masalah. Matematika dasar, khususnya logika, berperan penting dalam:</p>
+            <ul>
+                <li><strong>Kondisi dan Percabangan:</strong> Menggunakan logika boolean (AND, OR, NOT) untuk membuat keputusan</li>
+                <li><strong>Perulangan:</strong> Menerapkan logika untuk menentukan kapan loop harus berhenti</li>
+                <li><strong>Kompleksitas:</strong> Menggunakan fungsi matematika untuk menganalisis efisiensi algoritma</li>
+            </ul>
+            
+            <h3>Contoh Implementasi</h3>
+            <p><strong>Algoritma Pencarian Binary:</strong></p>
+            <p>Menggunakan konsep pembagian (fungsi matematika) dan perbandingan (logika) untuk mencari elemen dalam array terurut dengan kompleksitas O(log n).</p>
+            
+            <p><strong>Algoritma Sorting:</strong></p>
+            <p>Menerapkan logika perbandingan dan fungsi rekursif untuk mengurutkan data secara efisien.</p>
+        </div>
+
+        <!-- HALAMAN STRUKTUR DATA -->
+        <div id="struktur-data-section" class="content-section">
+            <div class="back-button" onclick="showHome()">← Kembali ke Beranda</div>
+            <h2>📊 Struktur Data dan Konsep Matematika</h2>
+            <h3>Penerapan Fungsi dalam Struktur Data</h3>
+            <p>Struktur data mengorganisir dan menyimpan data secara efisien menggunakan konsep matematika:</p>
+            <ul>
+                <li><strong>Array:</strong> Menggunakan fungsi indeks f(i) = base_address + (i × size)</li>
+                <li><strong>Linked List:</strong> Menerapkan konsep pointer dan referensi</li>
+                <li><strong>Tree:</strong> Menggunakan konsep hierarki dan fungsi rekursif</li>
+                <li><strong>Hash Table:</strong> Menerapkan fungsi hash untuk mapping data</li>
+            </ul>
+            
+            <h3>Contoh Implementasi</h3>
+            <p><strong>Binary Search Tree:</strong></p>
+            <p>Menggunakan logika perbandingan (x < parent → kiri, x > parent → kanan) dan fungsi rekursif untuk operasi insert, search, dan delete.</p>
+            
+            <p><strong>Graph:</strong></p>
+            <p>Menerapkan konsep relasi matematika dan fungsi untuk merepresentasikan hubungan antar node.</p>
+        </div>
+
+        <!-- HALAMAN LOGIKA MATEMATIKA -->
+        <div id="logika-section" class="content-section">
+            <div class="back-button" onclick="showHome()">← Kembali ke Beranda</div>
+            <h2>🧠 Logika Matematika dalam Informatika</h2>
+            <h3>Logika Proposisional</h3>
+            <p>Dasar pemikiran logis yang digunakan dalam pemrograman:</p>
+            <ul>
+                <li><strong>Proposisi:</strong> Pernyataan yang bernilai benar atau salah</li>
+                <li><strong>Operator Logika:</strong> AND (∧), OR (∨), NOT (¬), IMPLIES (→)</li>
+                <li><strong>Tabel Kebenaran:</strong> Menentukan nilai kebenaran dari kombinasi proposisi</li>
+            </ul>
+            
+            <h3>Logika Predikat</h3>
+            <p>Logika yang melibatkan variabel dan kuantor:</p>
+            <ul>
+                <li><strong>Universal Quantifier (∀):</strong> "untuk semua"</li>
+                <li><strong>Existential Quantifier (∃):</strong> "ada/terdapat"</li>
+            </ul>
+            
+            <h3>Aplikasi dalam Pemrograman</h3>
+            <p><strong>Conditional Statements:</strong> if-else menggunakan logika boolean</p>
+            <p><strong>Loop Conditions:</strong> while, for menggunakan evaluasi logika</p>
+            <p><strong>Database Queries:</strong> SQL menggunakan logika predikat</p>
+        </div>
+
+        <!-- HALAMAN FUNGSI MATEMATIKA -->
+        <div id="fungsi-section" class="content-section">
+            <div class="back-button" onclick="showHome()">← Kembali ke Beranda</div>
+            <h2>📈 Fungsi Matematika dalam Informatika</h2>
+            <h3>Konsep Dasar Fungsi</h3>
+            <p>Fungsi adalah pemetaan dari domain ke range:</p>
+            <ul>
+                <li><strong>Domain:</strong> Himpunan input yang valid</li>
+                <li><strong>Range:</strong> Himpunan output yang mungkin</li>
+                <li><strong>Codomain:</strong> Himpunan yang memuat semua kemungkinan output</li>
+            </ul>
+            
+            <h3>Jenis-jenis Fungsi</h3>
+            <ul>
+                <li><strong>Injektif (One-to-One):</strong> Setiap elemen domain dipetakan ke elemen range yang berbeda</li>
+                <li><strong>Surjektif (Onto):</strong> Setiap elemen range memiliki preimage di domain</li>
+                <li><strong>Bijektif:</strong> Fungsi yang injektif dan surjektif</li>
+            </ul>
+            
+            <h3>Aplikasi dalam Pemrograman</h3>
+            <p><strong>Hash Functions:</strong> Memetakan data ke indeks array</p>
+            <p><strong>Recursive Functions:</strong> Fungsi yang memanggil dirinya sendiri</p>
+            <p><strong>Lambda Functions:</strong> Fungsi anonim untuk operasi sederhana</p>
+            <p><strong>Big O Notation:</strong> Fungsi untuk menganalisis kompleksitas algoritma</p>
+        </div>
+
+        <!-- HALAMAN PROGRAM INTERAKTIF -->
+        <div id="program-section" class="content-section">
+            <div class="back-button" onclick="showHome()">← Kembali ke Beranda</div>
+            <h2>💻 Program Interaktif - Algoritma & Struktur Data</h2>
+            
+            <div class="program-container">
+                <div class="program-selector">
+                    <h3>Pilih Program untuk Dicoba:</h3>
+                    <div class="program-buttons">
+                        <button class="program-btn active" onclick="showProgram('binary-search')">Binary Search</button>
+                        <button class="program-btn" onclick="showProgram('bubble-sort')">Bubble Sort</button>
+                        <button class="program-btn" onclick="showProgram('stack')">Stack Operations</button>
+                        <button class="program-btn" onclick="showProgram('factorial')">Factorial (Rekursif)</button>
+                    </div>
+                </div>
+
+                <!-- Binary Search Program -->
+                <div id="binary-search-program" class="program-demo active">
+                    <h4>🔍 Binary Search Algorithm</h4>
+                    <p><strong>Konsep Matematika:</strong> Logika perbandingan dan fungsi pembagian</p>
+                    <div class="demo-area">
+                        <label>Array Terurut: [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]</label>
+                        <div class="input-group">
+                            <input type="number" id="search-value" placeholder="Masukkan angka yang dicari" min="1" max="20">
+                            <button onclick="performBinarySearch()">Cari</button>
+                        </div>
+                        <div id="search-result" class="result-area"></div>
+                        <div id="search-steps" class="steps-area"></div>
+                    </div>
+                </div>
+
+                <!-- Bubble Sort Program -->
+                <div id="bubble-sort-program" class="program-demo">
+                    <h4>🔄 Bubble Sort Algorithm</h4>
+                    <p><strong>Konsep Matematika:</strong> Logika perbandingan dan fungsi iterasi</p>
+                    <div class="demo-area">
+                        <div class="input-group">
+                            <input type="text" id="sort-input" placeholder="Masukkan angka dipisah koma (contoh: 64,34,25,12,22)">
+                            <button onclick="performBubbleSort()">Urutkan</button>
+                        </div>
+                        <div id="sort-result" class="result-area"></div>
+                        <div id="sort-steps" class="steps-area"></div>
+                    </div>
+                </div>
+
+                <!-- Stack Program -->
+                <div id="stack-program" class="program-demo">
+                    <h4>📚 Stack Data Structure</h4>
+                    <p><strong>Konsep Matematika:</strong> Fungsi LIFO (Last In First Out) dan operasi linear</p>
+                    <div class="demo-area">
+                        <div class="stack-controls">
+                            <input type="text" id="stack-input" placeholder="Masukkan elemen">
+                            <button onclick="pushToStack()">Push</button>
+                            <button onclick="popFromStack()">Pop</button>
+                            <button onclick="clearStack()">Clear</button>
+                        </div>
+                        <div class="stack-visual" id="stack-visual">
+                            <div class="stack-label">Stack (LIFO):</div>
+                        </div>
+                        <div id="stack-info" class="result-area"></div>
+                    </div>
+                </div>
+
+                <!-- Factorial Program -->
+                <div id="factorial-program" class="program-demo">
+                    <h4>🔢 Factorial Function (Rekursif)</h4>
+                    <p><strong>Konsep Matematika:</strong> Fungsi rekursif dan logika kondisional</p>
+                    <div class="demo-area">
+                        <div class="input-group">
+                            <input type="number" id="factorial-input" placeholder="Masukkan angka (0-10)" min="0" max="10">
+                            <button onclick="calculateFactorial()">Hitung Faktorial</button>
+                        </div>
+                        <div id="factorial-result" class="result-area"></div>
+                        <div id="factorial-steps" class="steps-area"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOMBOL KREDIT -->
+    <div class="credit-button" onclick="showCredits()">
+        👨‍💻 Kredit
+    </div>
+
+    <!-- MODAL KREDIT -->
+    <div id="credit-modal" class="modal">
+        <div class="modal-content">
+            <h2>👨‍💻 Kredit Pembuat</h2>
+            <p><strong>Website ini dibuat oleh:</strong></p>
+            <p>Canva Code Assistant</p>
+            <p>Dengan bantuan teknologi AI untuk pembelajaran matematika dasar dalam informatika</p>
+            <p><em>Dibuat dengan ❤️ untuk pendidikan</em></p>
+            <button class="close-modal" onclick="closeCredits()">Tutup</button>
+        </div>
+    </div>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'987be2d110d26112',t:'MTc1OTMyMDkzNi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
